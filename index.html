@@ -252,10 +252,10 @@ section h3 {
                 </div>
 
                 <div class="lg:hidden mt-12 flex justify-center">
-                    <div class="relative w-56 h-56 animate-float">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-[#05966920] to-[#0284c720] rounded-full scale-125 blur-2xl"></div>
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#05966915] to-[#0284c715] rounded-full scale-150 blur-3xl"></div>
                         <img src="https://i.postimg.cc/MHwxL6NL/Whats-App-Image-2026-02-11-at-8-20-37-PM.jpg"
-                             class="relative w-full h-full object-cover rounded-[40px] shadow-2xl border-2 border-white"
+                             class="relative w-full h-full object-contain animate-float"
                              alt="Z Pharmaka Logo Mobile">
                     </div>
                 </div>
@@ -279,7 +279,6 @@ section h3 {
         </div>
     </div>
 </section>
-
   <section id="about" class="max-w-7xl mx-auto px-6 py-28 bg-white">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -668,51 +667,17 @@ section h3 {
     </div>
 </footer>
 <script>
-    // 1. WhatsApp Submission Logic
-    function handleWhatsAppSubmit() {
-        const name = document.getElementById('c_name').value;
-        const code = document.getElementById('c_code').value;
-        const phone = document.getElementById('c_phone').value;
-        const purpose = document.getElementById('c_purpose').value;
-        const email = document.getElementById('c_email').value;
-        const msg = document.getElementById('c_message').value;
-
-        if(!name || !phone || !purpose || !email || !msg) {
-            alert('Please fill all fields');
-            return;
-        }
-
-        const fullMsg = `*New Business Enquiry*%0A%0A*Name:* ${name}%0A*Phone:* ${code} ${phone}%0A*Purpose:* ${purpose}%0A*Email:* ${email}%0A*Message:* ${msg}`;
-        window.open(`https://wa.me/919036633621?text=${fullMsg}`, '_blank');
-    }
-
-    // 2. Email Submission Logic
-    function handleEmailSubmit() {
-        const name = document.getElementById('c_name').value;
-        const code = document.getElementById('c_code').value;
-        const phone = document.getElementById('c_phone').value;
-        const purpose = document.getElementById('c_purpose').value;
-        const email = document.getElementById('c_email').value;
-        const msg = document.getElementById('c_message').value;
-
-        if(!name || !phone || !purpose || !email || !msg) {
-            alert('Please fill all fields');
-            return;
-        }
-
-        const subject = encodeURIComponent(`Z Pharmakka Enquiry: ${purpose} - ${name}`);
-        const body = encodeURIComponent(`Name: ${name}\nPhone: ${code} ${phone}\nPurpose: ${purpose}\nEmail: ${email}\n\nMessage:\n${msg}`);
-        window.location.href = `mailto:zpharmaka@gmail.com?subject=${subject}&body=${body}`;
-    }
-
     // 3. Product Modal Logic
     function openProduct(name, comp, desc) {
         document.getElementById('modal-title').innerText = name;
         document.getElementById('modal-comp').innerText = comp;
         document.getElementById('modal-desc').innerText = desc;
 
-        const message = encodeURIComponent(`Hi Z Pharmaka, I would like to know more about ${name} (${comp}).`);
-        document.getElementById('modal-wa').href = `https://wa.me/919036633621?text=${message}`;
+        const message = encodeURIComponent(
+            `Hi Z Pharmaka, I would like to know more about ${name} (${comp}).`
+        );
+        document.getElementById('modal-wa').href =
+            `https://wa.me/919036633621?text=${message}`;
 
         const modal = document.getElementById('product-modal');
         modal.style.display = 'flex';
@@ -726,28 +691,49 @@ section h3 {
     }
 
     // 4. Close modal if clicking outside
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         let modal = document.getElementById('product-modal');
         if (event.target == modal) {
             closeProduct();
         }
-    }
+    };
 
     // Quick message select function
     function setMessage(val) {
         document.getElementById('c_message').value = val;
     }
 
-    // Direct Redirect Function (❗ error fixed here only)
+    // Direct Redirect Function (with proper phone validation)
     function sendTo(platform) {
         const name = document.getElementById('c_name').value;
         const email = document.getElementById('c_email').value;
-        const phone = document.getElementById('c_code').value + document.getElementById('c_phone').value;
+        const phoneOnly = document.getElementById('c_phone').value;
+        const phone =
+            document.getElementById('c_code').value + phoneOnly;
         const purpose = document.getElementById('c_purpose').value;
         const msg = document.getElementById('c_message').value;
 
-        if(!name || !msg) {
+        // Basic required check
+        if (!name || !msg) {
             alert("Please fill Name and Message");
+            return;
+        }
+
+        // ✅ Numbers-only phone check (NEW – main fix)
+        if (!/^\d+$/.test(phoneOnly)) {
+            alert("Phone number-ൽ numbers മാത്രം നൽകൂ");
+            return;
+        }
+
+        // ✅ Phone length check
+        if (phoneOnly.length < 7) {
+            alert("Valid phone number നൽകൂ");
+            return;
+        }
+
+        // ✅ Email check (only for email button)
+        if (platform === 'email' && !email) {
+            alert("Email enter ചെയ്യൂ");
             return;
         }
 
@@ -759,12 +745,17 @@ Purpose: ${purpose}
 Message: ${msg}`
         );
 
-        if(platform === 'whatsapp') {
-            window.open(`https://wa.me/919036633621?text=${fullMsg}`, '_blank');
+        if (platform === 'whatsapp') {
+            window.open(
+                `https://wa.me/919036633621?text=${fullMsg}`,
+                '_blank'
+            );
         } else {
-            window.location.href = `mailto:zpharmaka@gmail.com?subject=Inquiry: ${purpose}&body=${fullMsg}`;
+            window.location.href =
+                `mailto:zpharmaka@gmail.com?subject=Inquiry: ${purpose}&body=${fullMsg}`;
         }
     }
 </script>
+
 </body>
 </html>
