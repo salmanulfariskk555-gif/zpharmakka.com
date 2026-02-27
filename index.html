@@ -190,6 +190,29 @@ section h3 {
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
+        /* Product image box kooduthal rasamaakkan */
+.product-image-container {
+    background: radial-gradient(circle, #ffffff 0%, #f1f5f9 100%);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px; /* Fixed height for uniformity */
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-image-container {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); /* Photo-kku oru shadow nalkunnu */
+}
 </style>
 
 <header class="fixed top-4 left-0 right-0 z-50 px-3 md:px-6">
@@ -227,15 +250,13 @@ section h3 {
         </div>
     </div>
 </header>
-<section id="home" class="relative min-h-screen flex items-center bg-white pt-40 md:pt-32 overflow-hidden">
+    <section id="home" class="relative min-h-screen flex items-center bg-white pt-40 md:pt-32 overflow-hidden">
     <div class="absolute top-20 right-0 w-64 h-64 bg-[#0284c705] rounded-full blur-3xl -z-10"></div>
     <div class="absolute bottom-20 left-0 w-64 h-64 bg-[#05966905] rounded-full blur-3xl -z-10"></div>
 
     <div class="max-w-7xl mx-auto w-full px-6 py-4">
-        <!-- FIXED HERE -->
         <div class="flex flex-col lg:flex-row lg:items-start items-center gap-6">
 
-            <!-- LEFT CONTENT -->
             <div class="w-full lg:w-1/2 space-y-4 text-center lg:text-left order-1">
                 <div class="space-y-2">
                     <h2 class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-slate-900 pt-4">
@@ -249,31 +270,28 @@ section h3 {
                     </p>
                 </div>
 
-                <div class="relative flex flex-col items-center lg:items-start lg:ml-16 pt-2">
-                    <div class="relative flex items-center justify-center lg:justify-start w-full min-h-[110px]">
+               <div class="relative flex items-center justify-center w-full min-h-[160px] mt-10">
 
-                        <a id="ayurvedic-opt" href="#products-section" onclick="filterProducts('ayurveda')" class="absolute flex flex-col items-center gap-1 opacity-0 transition-all duration-500 pointer-events-none z-10">
-                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center shadow-lg">
-                                <span class="text-xl">🌿</span>
-                            </div>
-                            <span class="text-[8px] font-black text-emerald-700 uppercase">Ayurvedic</span>
-                        </a>
+    <div id="ayurvedic-opt" onclick="filterProducts('ayurveda')"
+       class="absolute opacity-0 transition-all duration-500 pointer-events-none z-40 flex flex-col items-center gap-2 cursor-pointer"
+       style="left: 50%; transform: translateX(-50%);"> <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+            <span class="text-2xl">🌿</span>
+        </div>
+        <span class="text-[10px] font-black text-emerald-700 uppercase tracking-tighter">Ayurvedic</span>
+    </div>
 
-                        <button onclick="toggleProducts()" class="relative z-30 px-10 py-4 bg-[#059669] text-white rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] shadow-xl active:scale-95 transition-all">
-                            Our Products
-                        </button>
+    <button onclick="toggleProducts()" class="relative z-20 px-10 py-4 bg-[#059669] text-white rounded-2xl font-black text-[12px] uppercase tracking-[0.2em] shadow-xl active:scale-95 hover:bg-[#0284c7] transition-all">
+        Our Products
+    </button>
 
-                        <a id="medicine-opt" href="#products-section" onclick="filterProducts('allopathy')" class="absolute flex flex-col items-center gap-1 opacity-0 transition-all duration-500 pointer-events-none z-10">
-                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center shadow-lg">
-                                <span class="text-xl">💊</span>
-                            </div>
-                            <span class="text-[8px] font-black text-blue-700 uppercase">Allopathic</span>
-                        </a>
-
-                    </div>
-                </div>
-
-                <!-- MOBILE IMAGE -->
+    <div id="medicine-opt" onclick="filterProducts('allopathy')"
+       class="absolute opacity-0 transition-all duration-500 pointer-events-none z-40 flex flex-col items-center gap-2 cursor-pointer"
+       style="left: 50%; transform: translateX(-50%);"> <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+            <span class="text-2xl">💊</span>
+        </div>
+        <span class="text-[10px] font-black text-blue-700 uppercase tracking-tighter">Allopathic</span>
+    </div>
+</div>
                 <div class="lg:hidden mt-2 flex justify-center">
                     <div class="relative w-48 h-48">
                         <img src="https://i.postimg.cc/MHwxL6NL/Whats-App-Image-2026-02-11-at-8-20-37-PM.jpg"
@@ -283,7 +301,6 @@ section h3 {
                 </div>
             </div>
 
-            <!-- RIGHT IMAGE (FIXED ALIGNMENT) -->
             <div class="hidden lg:flex lg:w-1/2 justify-end items-start order-2">
                 <div class="relative w-[400px] h-[400px] animate-float">
                     <img src="https://i.postimg.cc/MHwxL6NL/Whats-App-Image-2026-02-11-at-8-20-37-PM.jpg"
@@ -345,6 +362,7 @@ section h3 {
         </div>
 
     </div>
+  </section>
   <section id="products-section" style="display: none;" class="max-w-7xl mx-auto px-4 py-20">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">Our Products</h2>
@@ -720,20 +738,19 @@ section h3 {
         </div>
     </div>
 </footer>
-      <script>
+  <script>
 /* ===============================
    1. GLOBAL STATE
 ================================ */
 let productIsOpen = false;
 
-// Default aayi section hide cheyyan (Page load aakumbol)
 window.onload = function() {
     const section = document.getElementById('products-section');
     if (section) section.style.display = 'none';
 };
 
 /* ===============================
-   2. TOGGLE PRODUCTS (ANIMATION)
+   2. TOGGLE PRODUCTS (FIXED SIDE-BY-SIDE)
 ================================ */
 function toggleProducts() {
     const ayur = document.getElementById('ayurvedic-opt');
@@ -742,44 +759,44 @@ function toggleProducts() {
     if (!ayur || !allo) return;
 
     const isDesktop = window.innerWidth > 1024;
-    const distance = isDesktop ? 180 : 120;
+    // ലാപ്ടോപ്പിൽ 140px, മൊബൈലിൽ 95px ദൂരത്തേക്ക് മാറുന്നു
+    const distance = isDesktop ? 140 : 160;
 
     if (!productIsOpen) {
+        // OPEN: വശങ്ങളിലേക്ക് മാത്രം നീങ്ങുന്നു
         ayur.style.opacity = "1";
         ayur.style.pointerEvents = "auto";
-        ayur.style.transform = `translateX(-${distance}px)`;
+        ayur.style.transform = `translateX(calc(-50% - ${distance}px))`;
 
         allo.style.opacity = "1";
         allo.style.pointerEvents = "auto";
-        allo.style.transform = `translateX(${distance}px)`;
+        allo.style.transform = `translateX(calc(-50% + ${distance}px))`;
 
         productIsOpen = true;
     } else {
+        // CLOSE: തിരികെ ഉള്ളിലേക്ക്
         ayur.style.opacity = "0";
         ayur.style.pointerEvents = "none";
-        ayur.style.transform = "translateX(0)";
+        ayur.style.transform = "translateX(-50%)";
 
         allo.style.opacity = "0";
         allo.style.pointerEvents = "none";
-        allo.style.transform = "translateX(0)";
+        allo.style.transform = "translateX(-50%)";
 
         productIsOpen = false;
     }
 }
 
 /* ===============================
-   3. PRODUCT FILTER LOGIC (FIXED)
+   3. PRODUCT FILTER LOGIC
 ================================ */
 function filterProducts(category) {
     const section = document.getElementById('products-section');
     const products = document.querySelectorAll('.product-card');
 
     if (!section) return;
-
-    // First: Section display cheyyikkuka
     section.style.display = 'block';
 
-    // Second: Products filter cheyyuka
     products.forEach(product => {
         if (product.classList.contains(category + '-item')) {
             product.style.display = 'flex';
@@ -788,12 +805,11 @@ function filterProducts(category) {
         }
     });
 
-    // Third: Click cheytha udane scroll cheyyuka
     setTimeout(() => {
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
 
-    // Menu automatic close cheyyuka
+    // പ്രൊഡക്റ്റ് സെലക്ട് ചെയ്താൽ മെനു താനേ ക്ലോസ് ആകും
     if (productIsOpen) {
         setTimeout(toggleProducts, 300);
     }
@@ -834,8 +850,10 @@ function closeProduct() {
 function sendTo(platform) {
     const name  = document.getElementById('c_name').value.trim();
     const msg   = document.getElementById('c_message').value.trim();
-    const phone = document.getElementById('c_code').value + document.getElementById('c_phone').value.trim();
-    const purpose = document.getElementById('c_purpose').value;
+    const phoneElem = document.getElementById('c_phone');
+    const codeElem = document.getElementById('c_code');
+    const phone = (codeElem ? codeElem.value : '') + (phoneElem ? phoneElem.value.trim() : '');
+    const purpose = document.getElementById('c_purpose') ? document.getElementById('c_purpose').value : 'General';
 
     if (!name || !msg) {
         alert("Please fill in your Name and Message.");
@@ -851,7 +869,7 @@ function sendTo(platform) {
     }
 }
 
-// Close modal on outside click
+// ബാക്ക്ഗ്രൗണ്ടിൽ ക്ലിക്ക് ചെയ്താൽ മോഡൽ ക്ലോസ് ചെയ്യാൻ
 window.onclick = function(event) {
     const modal = document.getElementById('product-modal');
     if (event.target == modal) closeProduct();
