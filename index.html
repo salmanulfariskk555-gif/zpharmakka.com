@@ -192,84 +192,103 @@ section h3 {
 }
 </style>
 
-</head>
-<body>
+<header class="fixed top-4 left-0 right-0 z-50 px-3 md:px-6">
+    <div class="max-w-6xl mx-auto glass-nav-container flex flex-col md:flex-row items-center justify-between py-3">
+        <div class="flex items-center space-x-4 w-full md:w-auto justify-center md:justify-start">
+            <img src="https://i.postimg.cc/MHwxL6NL/Whats-App-Image-2026-02-11-at-8-20-37-PM.jpg"
+                 alt="Logo"
+                 class="w-16 h-16 md:w-24 md:h-24 object-contain">
 
-    <header class="fixed top-4 left-0 right-0 z-50 px-3 md:px-6">
-        <div class="max-w-6xl mx-auto glass-nav-container flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center space-x-3 w-full md:w-auto justify-center md:justify-start">
-                <img src="https://i.postimg.cc/QMB1hSN8/Whats-App-Image-2026-02-05-at-12-46-01-AM.jpg" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-xl object-cover">
-                <div>
-                    <h1 class="text-2xl md:text-3xl font-extrabold leading-tight">
-                        <span class="brand-z">Z</span> <span class="text-slate-800">Pharmaka</span>
-                    </h1>
-                    <p class="text-[7px] md:text-[10px] font-bold text-gray-400 uppercase tracking-widest">Pvt Ltd | Guardian of Health</p>
-                </div>
+            <div class="flex flex-col">
+                <h1 class="text-3xl md:text-4xl font-black leading-tight whitespace-nowrap">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#059669] to-[#0284c7]">
+                        Z Pharmaka
+                    </span>
+                    <span class="text-[#0284c7]"> Pvt Ltd</span>
+                </h1>
+                <p class="text-[10px] md:text-[14px] font-extrabold text-gray-500 uppercase tracking-[0.4em] text-center w-full mt-1">
+    Guardian of Health
+</p>
             </div>
-
-            <nav class="menu-grid w-full md:w-auto">
-                <a href="#home" class="menu-pill">Home</a>
-                <a href="#about" class="menu-pill">About</a>
-                <a href="#products-section" class="menu-pill">Products</a>
-                <a href="#contact" class="menu-pill">Contact</a>
-                <div class="col-span-4 md:hidden mt-2">
-                    <a href="#catalogue-section" class="btn-portfolio block">Explore Portfolio</a>
-                </div>
-                <div class="hidden md:block">
-                     <a href="#catalogue-section" class="btn-portfolio block ml-4">Explore Portfolio</a>
-                </div>
-            </nav>
         </div>
-    </header>
 
- <section id="home" class="relative min-h-screen flex items-center bg-white pt-40 md:pt-0 overflow-hidden">
+        <div class="flex flex-col items-center md:items-end w-full md:w-auto mt-4 md:mt-0">
+            <nav class="flex items-center space-x-8 md:space-x-12 mb-2">
+                <a href="#home" class="text-xs md:text-sm font-black uppercase tracking-widest text-slate-700 hover:text-[#059669] transition-all">Home</a>
+                <a href="#about" class="text-xs md:text-sm font-black uppercase tracking-widest text-slate-700 hover:text-[#059669] transition-all">About</a>
+                <a href="#contact" class="text-xs md:text-sm font-black uppercase tracking-widest text-slate-700 hover:text-[#059669] transition-all">Contact</a>
+            </nav>
+
+            <div class="w-full md:w-auto">
+                <a href="#catalogue-section" class="btn-portfolio block text-center py-2 px-10 text-[9px] md:text-[10px] font-black uppercase tracking-widest bg-gradient-to-r from-[#059669] to-[#0284c7] text-white rounded-lg shadow-lg hover:scale-105 transition-all">
+                    Explore Portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="home" class="relative min-h-screen flex items-center bg-white pt-40 md:pt-32 overflow-hidden">
     <div class="absolute top-20 right-0 w-64 h-64 bg-[#0284c705] rounded-full blur-3xl -z-10"></div>
     <div class="absolute bottom-20 left-0 w-64 h-64 bg-[#05966905] rounded-full blur-3xl -z-10"></div>
 
-    <div class="max-w-7xl mx-auto w-full px-6">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
+    <div class="max-w-7xl mx-auto w-full px-6 py-4">
+        <!-- FIXED HERE -->
+        <div class="flex flex-col lg:flex-row lg:items-start items-center gap-6">
 
-            <div class="w-full lg:w-1/2 space-y-8 text-center lg:text-left order-1">
-                <div class="space-y-4">
-                    <h2 class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-slate-900">
+            <!-- LEFT CONTENT -->
+            <div class="w-full lg:w-1/2 space-y-4 text-center lg:text-left order-1">
+                <div class="space-y-2">
+                    <h2 class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight text-slate-900 pt-4">
                         <span class="animate-text-shimmer bg-clip-text text-transparent bg-gradient-to-r from-[#059669] via-[#0284c7] to-[#059669] bg-[length:200%_auto]">
                             Better Cure
                         </span><br>
                         <span class="text-slate-800 tracking-tight">For Better Life.</span>
                     </h2>
-                    <p class="text-gray-500 text-lg md:text-xl font-medium max-w-md mx-auto lg:mx-0 leading-relaxed">
+                    <p class="text-gray-500 text-base md:text-lg font-medium max-w-md mx-auto lg:mx-0 leading-snug">
                         Bridging Ayurvedic tradition with modern medical precision for a healthier tomorrow.
                     </p>
                 </div>
 
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <a href="#products-section" class="px-8 py-4 bg-[#059669] text-white rounded-2xl font-black hover:shadow-[0_20px_40px_-10px_rgba(5,150,105,0.3)] transition-all duration-300 text-sm uppercase tracking-widest border-2 border-[#059669] hover:bg-transparent hover:text-[#059669]">
-                        Our Medicines
-                    </a>
-                    <a href="#contact" class="px-8 py-4 border-2 border-[#0284c7] text-[#0284c7] rounded-2xl font-black hover:bg-blue-50 transition-all duration-300 text-sm uppercase tracking-widest shadow-sm">
-                        Contact Us
-                    </a>
+                <div class="relative flex flex-col items-center lg:items-start lg:ml-16 pt-2">
+                    <div class="relative flex items-center justify-center lg:justify-start w-full min-h-[110px]">
+
+                        <a id="ayurvedic-opt" href="#products-section" onclick="filterProducts('ayurveda')" class="absolute flex flex-col items-center gap-1 opacity-0 transition-all duration-500 pointer-events-none z-10">
+                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-emerald-500 flex items-center justify-center shadow-lg">
+                                <span class="text-xl">🌿</span>
+                            </div>
+                            <span class="text-[8px] font-black text-emerald-700 uppercase">Ayurvedic</span>
+                        </a>
+
+                        <button onclick="toggleProducts()" class="relative z-30 px-10 py-4 bg-[#059669] text-white rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] shadow-xl active:scale-95 transition-all">
+                            Our Products
+                        </button>
+
+                        <a id="medicine-opt" href="#products-section" onclick="filterProducts('allopathy')" class="absolute flex flex-col items-center gap-1 opacity-0 transition-all duration-500 pointer-events-none z-10">
+                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center shadow-lg">
+                                <span class="text-xl">💊</span>
+                            </div>
+                            <span class="text-[8px] font-black text-blue-700 uppercase">Allopathic</span>
+                        </a>
+
+                    </div>
                 </div>
 
-                <div class="lg:hidden mt-12 flex justify-center">
-                    <div class="relative w-64 h-64">
+                <!-- MOBILE IMAGE -->
+                <div class="lg:hidden mt-2 flex justify-center">
+                    <div class="relative w-48 h-48">
                         <img src="https://i.postimg.cc/MHwxL6NL/Whats-App-Image-2026-02-11-at-8-20-37-PM.jpg"
-                             class="relative w-full h-full object-contain animate-float"
+                             class="w-full h-full object-contain animate-float"
                              alt="Z Pharmaka Logo Mobile">
                     </div>
                 </div>
             </div>
 
-            <div class="hidden lg:w-1/2 lg:flex justify-center lg:justify-end order-2">
-                <div class="relative w-[450px] h-[450px] animate-float">
+            <!-- RIGHT IMAGE (FIXED ALIGNMENT) -->
+            <div class="hidden lg:flex lg:w-1/2 justify-end items-start order-2">
+                <div class="relative w-[400px] h-[400px] animate-float">
                     <img src="https://i.postimg.cc/MHwxL6NL/Whats-App-Image-2026-02-11-at-8-20-37-PM.jpg"
                          class="w-full h-full object-contain"
                          alt="Z Pharmaka Logo Desktop">
-
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-50 hidden md:block">
-                        <p class="text-[10px] font-black text-[#059669] uppercase tracking-widest">Quality Assurance</p>
-                        <p class="text-slate-800 font-bold text-sm uppercase"></p>
-                    </div>
                 </div>
             </div>
 
@@ -326,143 +345,166 @@ section h3 {
         </div>
 
     </div>
-      </section>
-<section id="products-section" class="max-w-7xl mx-auto px-4 py-20">
+  <section id="products-section" style="display: none;" class="max-w-7xl mx-auto px-4 py-20">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">Our Products</h2>
         <div class="w-20 h-1.5 bg-gradient-to-r from-[#059669] to-[#0284c7] mx-auto rounded-full"></div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+    <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="CEFOZ-200">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
-            </div>
-            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">CEFOZ-200</h4>
-            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Cefpodoxime Proxetil</p>
-            <button onclick="openProduct('CEFOZ-200', 'Cefpodoxime Proxetil Tablets I.P.', 'Susceptible mild to moderate infections, Bronchitis, Sinusitis, Pharyngitis, Tonsillitis, Pneumonia, UTI, and Gonorrhea.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
-        </div>
-
-       <div class="product-card group flex flex-col h-full">
-    <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1626716586544-6c6132bf72e?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ZLACT">
-        <span class="absolute top-2 left-2 bg-blue-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Lotion</span>
-    </div>
-    <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">ZLACT</h4>
-    <p class="text-slate-500 text-[10px] mb-4 flex-grow">Calamine & Aloe Vera</p>
-    <button onclick="openProduct('ZLACT', 'Calamine 8%, Aloe Vera & Camphor', 'Soothing relief for dry/irritated skin, treatment for itching and minor skin irritations.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
-</div>
-
-        <div class="product-card group flex flex-col h-full">
-            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1550572017-ed200f5e6383?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="DORVAZ A">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+                <img src="https://i.postimg.cc/m2kw6Qt9/Whats-App-Image-2026-02-24-at-8-12-16-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="DORVAZ A">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">DORVAZ A</h4>
             <p class="text-slate-500 text-[10px] mb-4 flex-grow">Drotaverine & Aceclofenac</p>
-            <button onclick="openProduct('DORVAZ A', 'Drotaverine hydrochloride & Aceclofenac', 'Intestinal Colic, Biliary Colic, Renal Colic, Irritable Bowel Syndrome, and Post-operative pain relief.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <button onclick="openProduct('DORVAZ A', 'Drotaverine & Aceclofenac', 'Intestinal Colic, Biliary Colic, Renal Colic, and Spasmodic Dysmenorrhea.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ZRAB">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+                <img src="https://i.postimg.cc/fTQ22868/Whats-App-Image-2026-02-24-at-8-12-23-PM-(2).jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ZRAB">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">ZRAB</h4>
-            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Rabeprazole Sodium</p>
-            <button onclick="openProduct('ZRAB', 'Rabeprazole Sodium 20 Mg', 'Gastric Ulcer, Peptic Ulcer Disease, erosive ulcerative GERD, and Zollinger-Ellison Syndrome.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Rabeprazole Sodium 20 Mg</p>
+            <button onclick="openProduct('ZRAB', 'Rabeprazole Sodium 20 Mg', 'Gastric Ulcer, Peptic Ulcer, and GERD treatment.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="DUTAZIL">
-                <span class="absolute top-2 left-2 bg-purple-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Capsule</span>
+                <img src="https://i.postimg.cc/d3y2mKsq/Whats-App-Image-2026-02-24-at-8-12-17-PM-(1).jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="DUTAZIL">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Capsule</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">DUTAZIL</h4>
-            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Silodosin + Dutasteride</p>
-            <button onclick="openProduct('DUTAZIL', 'Silodosin 8 mg + Dutasteride 0.5 mg', 'Reduces Prostate Gland Enlargement (BPH), Improves Urine flow in Men, and Acute urinary Retention.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Silodosin & Dutasteride</p>
+            <button onclick="openProduct('DUTAZIL', 'Silodosin 8 mg + Dutasteride 0.5 mg', 'Benign Prostatic Hyperplasia (BPH) and Urine flow improvement.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1555633514-abcee6ad93e1?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ENZYMZ">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+                <img src="https://i.postimg.cc/WzBh8Ldn/Whats-App-Image-2026-02-24-at-8-12-17-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ENZYMZ">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">ENZYMZ</h4>
-            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Bromelain & Trypsin</p>
-            <button onclick="openProduct('ENZYMZ', 'Bromelain, Rutoside & Trypsin', 'Back Pain, Fibrosis, Cellulitis, Post Surgery healing, and Respiratory Tract Infections.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Bromelain, Rutoside & Trypsin</p>
+            <button onclick="openProduct('ENZYMZ', 'Bromelain, Rutoside & Trypsin', 'Back Pain, Wound Healing, and Respiratory Tract Infections.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1471864190281-ad5f9f33d70e?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="CILOSTRAZ">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+                <img src="https://i.postimg.cc/9XZ17Grz/Whats-App-Image-2026-02-24-at-8-12-25-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="CILOSTRAZ">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">CILOSTRAZ</h4>
             <p class="text-slate-500 text-[10px] mb-4 flex-grow">Cilostazol I.P. 100 mg</p>
-            <button onclick="openProduct('CILOSTRAZ', 'Cilostazol I.P. 100 mg tablets', 'Intermittent claudication, PVD, Peripheral arterial disease in diabetics, and Post-angioplasty care.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <button onclick="openProduct('CILOSTRAZ', 'Cilostazol I.P. 100 mg', 'Intermittent claudication and Peripheral arterial disease.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1559744279-04c3298c764e?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="DISOZ">
-                <span class="absolute top-2 left-2 bg-orange-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Syrup</span>
+                <img src="https://i.postimg.cc/m2kw6Qt9/Whats-App-Image-2026-02-24-at-8-12-16-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="DISOZ">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Syrup</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">DISOZ</h4>
             <p class="text-slate-500 text-[10px] mb-4 flex-grow">Systemic Alkaliser</p>
-            <button onclick="openProduct('DISOZ', 'Disodium Hydrogen Citrate 1.53 GM', 'Treating Metabolic Acidosis and kidney stones, neutralizes excess acid in blood and urine.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <button onclick="openProduct('DISOZ', 'Disodium Hydrogen Citrate', 'Treats Metabolic Acidosis and Kidney stones.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1628771065518-0d82f1938462?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="HEMOZ">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+                <img src="https://i.postimg.cc/wx2ggsg4/Whats-App-Image-2026-02-24-at-8-12-19-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="HEMOZ">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">HEMOZ</h4>
-            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Iron & Folic Acid</p>
-            <button onclick="openProduct('HEMOZ', 'Ferrous Ascorbate, Folic Acid & Zinc', 'Blood loss, Anaemia management, Pregnancy and Lactation, and useful in Menorrhagia.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Ferrous Ascorbate & Folic Acid</p>
+            <button onclick="openProduct('HEMOZ', 'Ferrous Ascorbate & Folic Acid', 'Treatment for Anaemia and blood loss.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
         </div>
 
-        <div class="product-card group flex flex-col h-full">
+        <div class="product-card allopathy-item group flex flex-col h-full">
             <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="VITOZ">
-                <span class="absolute top-2 left-2 bg-green-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+                <img src="https://i.postimg.cc/NM1G1N3D/Whats-App-Image-2026-02-24-at-8-12-18-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="VITOZ">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
             </div>
             <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">VITOZ</h4>
-            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Multivitamin & Mineral</p>
-            <button onclick="openProduct('VITOZ', 'Ginseng, Folic Acid & Multivitamins', 'Adaptogen to fight fatigue, increase stamina, and supports body against stressors.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Multivitamins & Ginseng</p>
+            <button onclick="openProduct('VITOZ', 'Multivitamins & Ginseng', 'Fights fatigue and increases stamina.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card allopathy-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://i.postimg.cc/vBPqSMwY/Whats-App-Image-2026-02-24-at-8-12-23-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ZLACT">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Lotion</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">ZLACT</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Calamine & Aloe Vera</p>
+            <button onclick="openProduct('ZLACT', 'Calamine 8%, Aloe Vera & Camphor', 'Soothing relief for skin irritation, itching, and dry skin.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card allopathy-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://i.postimg.cc/J06fJZhC/Whats-App-Image-2026-02-24-at-8-12-21-PM.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="CEFPOZ-200">
+                <span class="absolute top-2 left-2 bg-blue-600 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Tablet</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">CEFPOZ-200</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Cefpodoxime Proxetil I.P.</p>
+            <button onclick="openProduct('CEFPOZ-200', 'Cefpodoxime Proxetil I.P.', 'Urinary Tract Infections (UTI), Respiratory infections, and throat infections.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#0284c7] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card ayurveda-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1611073221705-0210e3034944?q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Z-LIV">
+                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Ayurvedic</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">Z-LIV Tonic</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Herbal Liver Support</p>
+            <button onclick="openProduct('Z-LIV Tonic', 'Ayurvedic Liver Tonic', 'Highly effective in Jaundice and Fatty Liver.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card ayurveda-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1559744279-04c3298c764e?q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Z-COUGH">
+                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Ayurvedic</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">Z-COUGH Syrup</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Tulsi & Honey Formula</p>
+            <button onclick="openProduct('Z-COUGH Syrup', 'Natural Herbal Cough Syrup', 'Relief from dry and wet cough.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card ayurveda-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1584362923661-01219c11999b?q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="ASHWAGANDHA Z">
+                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Ayurvedic</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">ASHWAGANDHA Z</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Immunity & Stress</p>
+            <button onclick="openProduct('ASHWAGANDHA Z', 'Ashwagandha Extract 500mg', 'Boosts immunity and reduces stress.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card ayurveda-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Z-PAIN OIL">
+                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Ayurvedic</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">Z-PAIN OIL</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Herbal Pain Relief</p>
+            <button onclick="openProduct('Z-PAIN OIL', 'Ayurvedic Massage Oil', 'Relieves Joint pain and Muscle stiffness.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
+        </div>
+
+        <div class="product-card ayurveda-item group flex flex-col h-full">
+            <div class="relative aspect-square mb-4 bg-slate-50 rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="NEEM-Z">
+                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[8px] font-bold px-2 py-1 rounded-md uppercase">Ayurvedic</span>
+            </div>
+            <h4 class="font-extrabold text-sm md:text-base text-slate-800 line-clamp-1 uppercase">NEEM-Z Tablets</h4>
+            <p class="text-slate-500 text-[10px] mb-4 flex-grow">Natural Blood Purifier</p>
+            <button onclick="openProduct('NEEM-Z', 'Pure Neem Extract', 'Treats acne and skin infections.')" class="w-full py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">View Details</button>
         </div>
 
     </div>
 </section>
-
-<div id="product-modal" class="fixed inset-0 z-[10000] hidden bg-black/80 backdrop-blur-md items-center justify-center p-4">
-    <div class="bg-white w-full max-w-lg rounded-[30px] overflow-hidden relative animate-in fade-in zoom-in duration-300">
-        <button onclick="closeProduct()" class="absolute top-4 right-4 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-xl font-bold z-10">×</button>
-
-        <div class="p-6 md:p-10">
-            <div class="w-24 h-24 bg-slate-50 rounded-2xl mb-6 mx-auto flex items-center justify-center text-4xl shadow-inner">💊</div>
-            <h3 id="modal-title" class="text-2xl md:text-3xl font-black text-slate-900 text-center uppercase tracking-tight"></h3>
-            <p id="modal-comp" class="text-[#059669] text-xs font-bold text-center mt-2 uppercase tracking-widest"></p>
-
-            <div class="mt-8 space-y-4">
-                <h5 class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Indications & Uses</h5>
-                <p id="modal-desc" class="text-slate-600 text-sm md:text-base leading-relaxed"></p>
-            </div>
-
-            <div class="mt-10 flex flex-col gap-3">
-                <a id="modal-wa" href="#" target="_blank" class="w-full py-4 bg-[#25D366] text-white rounded-2xl font-black text-center flex items-center justify-center gap-2 shadow-lg shadow-green-200">
-                    WHATSAPP ENQUIRY
-                </a>
-                <button onclick="closeProduct()" class="w-full py-4 text-slate-400 font-bold text-xs uppercase tracking-widest">Close Details</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
    <section id="catalogue-section" class="max-w-7xl mx-auto px-6 py-20 bg-white rounded-[40px] mt-10 border border-slate-50">
     <div class="mb-12 border-b border-slate-100 pb-6">
         <h3 class="text-3xl font-black text-slate-900 tracking-tight">Corporate Portfolio Details</h3>
@@ -590,7 +632,22 @@ section h3 {
             </form>
         </div>
     </div>
+    <div id="product-modal">
+  <div class="bg-white max-w-md w-full rounded-3xl p-6 relative">
+    <button onclick="closeProduct()" class="absolute top-4 right-4 text-xl font-black">✕</button>
+
+    <h3 id="modal-title" class="text-2xl font-black mb-2"></h3>
+    <p id="modal-comp" class="text-sm font-bold text-slate-500 mb-4"></p>
+    <p id="modal-desc" class="text-slate-600 text-sm mb-6"></p>
+
+    <a id="modal-wa" target="_blank"
+       class="block text-center py-3 bg-[#25D366] text-white rounded-xl font-black text-xs uppercase">
+       WhatsApp Inquiry
+    </a>
+  </div>
+</div>
 </section>
+
 <footer class="bg-white pt-16 md:pt-20 pb-8 border-t border-slate-100 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
@@ -663,96 +720,142 @@ section h3 {
         </div>
     </div>
 </footer>
-<script>
-    // 3. Product Modal Logic
-    function openProduct(name, comp, desc) {
-        document.getElementById('modal-title').innerText = name;
-        document.getElementById('modal-comp').innerText = comp;
-        document.getElementById('modal-desc').innerText = desc;
+      <script>
+/* ===============================
+   1. GLOBAL STATE
+================================ */
+let productIsOpen = false;
 
-        const message = encodeURIComponent(
-            `Hi Z Pharmaka, I would like to know more about ${name} (${comp}).`
-        );
-        document.getElementById('modal-wa').href =
-            `https://wa.me/919036633621?text=${message}`;
+// Default aayi section hide cheyyan (Page load aakumbol)
+window.onload = function() {
+    const section = document.getElementById('products-section');
+    if (section) section.style.display = 'none';
+};
 
-        const modal = document.getElementById('product-modal');
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+/* ===============================
+   2. TOGGLE PRODUCTS (ANIMATION)
+================================ */
+function toggleProducts() {
+    const ayur = document.getElementById('ayurvedic-opt');
+    const allo = document.getElementById('medicine-opt');
+
+    if (!ayur || !allo) return;
+
+    const isDesktop = window.innerWidth > 1024;
+    const distance = isDesktop ? 180 : 120;
+
+    if (!productIsOpen) {
+        ayur.style.opacity = "1";
+        ayur.style.pointerEvents = "auto";
+        ayur.style.transform = `translateX(-${distance}px)`;
+
+        allo.style.opacity = "1";
+        allo.style.pointerEvents = "auto";
+        allo.style.transform = `translateX(${distance}px)`;
+
+        productIsOpen = true;
+    } else {
+        ayur.style.opacity = "0";
+        ayur.style.pointerEvents = "none";
+        ayur.style.transform = "translateX(0)";
+
+        allo.style.opacity = "0";
+        allo.style.pointerEvents = "none";
+        allo.style.transform = "translateX(0)";
+
+        productIsOpen = false;
+    }
+}
+
+/* ===============================
+   3. PRODUCT FILTER LOGIC (FIXED)
+================================ */
+function filterProducts(category) {
+    const section = document.getElementById('products-section');
+    const products = document.querySelectorAll('.product-card');
+
+    if (!section) return;
+
+    // First: Section display cheyyikkuka
+    section.style.display = 'block';
+
+    // Second: Products filter cheyyuka
+    products.forEach(product => {
+        if (product.classList.contains(category + '-item')) {
+            product.style.display = 'flex';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+
+    // Third: Click cheytha udane scroll cheyyuka
+    setTimeout(() => {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+
+    // Menu automatic close cheyyuka
+    if (productIsOpen) {
+        setTimeout(toggleProducts, 300);
+    }
+}
+
+/* ===============================
+   4. PRODUCT MODAL LOGIC
+================================ */
+function openProduct(name, comp, desc) {
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+
+    document.getElementById('modal-title').innerText = name;
+    document.getElementById('modal-comp').innerText  = comp;
+    document.getElementById('modal-desc').innerText  = desc;
+
+    const msg = encodeURIComponent(`Hi Z Pharmaka, I am interested in: ${name} (${comp}).`);
+    const waBtn = document.getElementById('modal-wa');
+    if(waBtn) {
+        waBtn.href = `https://wa.me/919036633621?text=${msg}`;
     }
 
-    function closeProduct() {
-        const modal = document.getElementById('product-modal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProduct() {
+    const modal = document.getElementById('product-modal');
+    if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
+}
 
-    // 4. Close modal if clicking outside
-    window.onclick = function (event) {
-        let modal = document.getElementById('product-modal');
-        if (event.target == modal) {
-            closeProduct();
-        }
-    };
+/* ===============================
+   5. CONTACT FORM
+================================ */
+function sendTo(platform) {
+    const name  = document.getElementById('c_name').value.trim();
+    const msg   = document.getElementById('c_message').value.trim();
+    const phone = document.getElementById('c_code').value + document.getElementById('c_phone').value.trim();
+    const purpose = document.getElementById('c_purpose').value;
 
-    // Quick message select function
-    function setMessage(val) {
-        document.getElementById('c_message').value = val;
+    if (!name || !msg) {
+        alert("Please fill in your Name and Message.");
+        return;
     }
 
-    // Direct Redirect Function (with proper phone validation)
-    function sendTo(platform) {
-        const name = document.getElementById('c_name').value;
-        const email = document.getElementById('c_email').value;
-        const phoneOnly = document.getElementById('c_phone').value;
-        const phone =
-            document.getElementById('c_code').value + phoneOnly;
-        const purpose = document.getElementById('c_purpose').value;
-        const msg = document.getElementById('c_message').value;
+    const fullMsg = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nPurpose: ${purpose}\nMessage: ${msg}`);
 
-        // Basic required check
-        if (!name || !msg) {
-            alert("Please fill Name and Message");
-            return;
-        }
-
-        // ✅ Numbers-only phone check (NEW – main fix)
-        if (!/^\d+$/.test(phoneOnly)) {
-            alert("Phone number-ൽ numbers മാത്രം നൽകൂ");
-            return;
-        }
-
-        // ✅ Phone length check
-        if (phoneOnly.length < 7) {
-            alert("Valid phone number നൽകൂ");
-            return;
-        }
-
-        // ✅ Email check (only for email button)
-        if (platform === 'email' && !email) {
-            alert("Email enter ചെയ്യൂ");
-            return;
-        }
-
-        const fullMsg = encodeURIComponent(
-            `Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Purpose: ${purpose}
-Message: ${msg}`
-        );
-
-        if (platform === 'whatsapp') {
-            window.open(
-                `https://wa.me/919036633621?text=${fullMsg}`,
-                '_blank'
-            );
-        } else {
-            window.location.href =
-                `mailto:zpharmaka@gmail.com?subject=Inquiry: ${purpose}&body=${fullMsg}`;
-        }
+    if (platform === 'whatsapp') {
+        window.open(`https://wa.me/919036633621?text=${fullMsg}`, '_blank');
+    } else {
+        window.location.href = `mailto:zpharmaka@gmail.com?subject=Website Inquiry&body=${fullMsg}`;
     }
+}
+
+// Close modal on outside click
+window.onclick = function(event) {
+    const modal = document.getElementById('product-modal');
+    if (event.target == modal) closeProduct();
+}
 </script>
-
-</body>
+<body>
 </html>
